@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268780559259",
+    "project_id": "chatwithstrangers-52745",
+    "storage_bucket": "chatwithstrangers-52745.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268780559259:android:9755f7b54495c9517b9f3e",
+        "android_client_info": {
+          "package_name": "com.riteshmaagadh.chatwithstrangers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268780559259-uvla6oim3pobhtv9g259g6b03t5udgm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoWaWUEnw6TIGfcztxoiHUqi4F7Zm2m68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268780559259-uvla6oim3pobhtv9g259g6b03t5udgm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

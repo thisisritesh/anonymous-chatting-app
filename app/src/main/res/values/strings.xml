@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mungia</string>
+    <string name="write_message_hint">Write message...</string>
+    <string name="start_a_chat">Start a chat</string>
+    <string name="description_txt">Mungia app is a great way to meet new friends. When you use this app, you are paired randomly with another person to talk one-on-one. To help you stay safe, chats are anonymous unless you tell someone who you are (not recommended!), and you can stop a chat at any time. See our Terms of Service and Community Guidelines for more info about the do’s and don’ts in using this app. Users are solely responsible for their behavior while using this app.</string>
+    <string name="i_agree_to_the_terms_conditions_privacy_policy_and_community_guidelines"><![CDATA[I agree to the terms & conditions, privacy policy and community guidelines.]]></string>
+    <string name="do_you_really_want_to_skip_start_chat_with_another_user"><![CDATA[Do you really want to skip & start chat with another user?]]></string>
+</resources>
