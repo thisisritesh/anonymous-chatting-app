@@ -2,7 +2,7 @@ package com.riteshmaagadh.chatwithstrangers.callbacks
 
 interface AlertDialogCallbacks {
 
-    fun onPositiveButtonClicked()
+    fun onPositiveButtonClicked(string: String = "")
 
     fun onNegativeButtonClicked()
 

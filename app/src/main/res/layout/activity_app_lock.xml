@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:orientation="vertical"
+    tools:context=".AppLockActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/heading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/bold"
+            android:text="App lock"
+            android:textColor="@color/dull_white"
+            android:textSize="36sp"
+            android:layout_gravity="center_vertical|start" />
+
+        <ImageButton
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_close_24"
+            android:background="@android:color/transparent"
+            app:tint="@color/dull_white"
+            android:layout_gravity="center_vertical|end"
+            android:padding="16dp"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sub_heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/prevent_anyone_from_reading_your_messages_by_setting_up_a_password_for_the_app"
+        android:textColor="@color/dull_white"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading_tv" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_bg"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_heading_tv">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/dull_white"
+            android:textSize="16sp"
+            android:text="Enable lock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading_tv" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="end|center_vertical"
+            android:thumb="@drawable/custom_thumb"
+            android:track="@drawable/custom_track"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/change_pin_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:background="@drawable/rectangle_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:textSize="24sp"
+                android:textColor="@color/dull_white"
+                android:background="@drawable/rounded_rectangle_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:textSize="24sp"
+                android:textColor="@color/dull_white"
+                android:background="@drawable/rounded_rectangle_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:textSize="24sp"
+                android:layout_margin="8dp"
+                android:textColor="@color/dull_white"
+                android:background="@drawable/rounded_rectangle_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:padding="16dp"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:textColor="@color/dull_white"
+                android:background="@drawable/rounded_rectangle_bg"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/change_pin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change PIN"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/bold"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="@color/light_dark"
     android:padding="20dp">
     <ProgressBar
         android:layout_width="0dp"
@@ -15,5 +16,6 @@
         android:layout_weight="4"
         android:layout_gravity="center"
         android:textSize="20sp"
+        android:textColor="@color/dull_white"
         android:text="Searching! Please wait..." />
 </LinearLayout>

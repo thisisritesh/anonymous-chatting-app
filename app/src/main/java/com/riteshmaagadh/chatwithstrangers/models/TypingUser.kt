@@ -2,6 +2,6 @@ package com.riteshmaagadh.chatwithstrangers.models
 
 import com.google.firebase.firestore.DocumentId
 
-data class TypingUser(@DocumentId var documentId: String, var deviceId: String) {
+data class TypingUser(@DocumentId var documentID: String, var username: String) {
     constructor() : this("","")
 }

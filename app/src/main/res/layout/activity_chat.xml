@@ -4,51 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_color"
+    android:background="@color/dark"
     tools:context=".ChatActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_image_view"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/chats_recycler_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/semibold"
-        android:textColor="@color/cool_white"
+        android:textColor="@color/dull_white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/skip_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar_image_view"
         app:layout_constraintEnd_toStartOf="@+id/skip_btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/skip_btn" />
+        app:layout_constraintStart_toEndOf="@+id/avatar_image_view"
+        app:layout_constraintTop_toTopOf="@+id/avatar_image_view" />
 
     <ImageButton
         android:id="@+id/skip_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:padding="16dp"
         android:src="@drawable/round_close_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/cool_white"
+        app:tint="@color/dull_white"
         tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/image_picker_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:src="@drawable/image_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="@+id/message_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_edit_text"
+        app:tint="@color/purple_500" />
 
     <EditText
         android:id="@+id/message_edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="@string/write_message_hint"
-        android:fontFamily="@font/bold"
-        android:textColorHint="@color/purple_500"
-        android:textColor="@color/purple_500"
         android:background="@drawable/edit_text_bg"
+        android:fontFamily="@font/semibold"
+        android:hint="@string/write_message_hint"
+        android:textColor="@color/dull_white"
+        android:textColorHint="@color/secondary_text_color_day"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/send_btn"
         app:layout_constraintEnd_toStartOf="@+id/send_btn"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_picker_btn"
         app:layout_constraintTop_toTopOf="@+id/send_btn" />
 
     <Button
@@ -71,12 +93,24 @@
         android:id="@+id/chats_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:reverseLayout="true"
         android:orientation="vertical"
-        tools:listitem="@layout/message_item_me"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/message_edit_text"
+        app:layout_constraintBottom_toTopOf="@+id/typing_lottie_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/skip_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/skip_btn"
+        app:reverseLayout="true"
+        tools:listitem="@layout/message_item_me" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/typing_lottie_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:visibility="gone"
+        app:lottie_loop="true"
+        app:layout_constraintBottom_toTopOf="@+id/message_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_rawRes="@raw/anim_typing" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

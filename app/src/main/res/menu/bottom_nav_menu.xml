@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/discover_menu"
+        android:icon="@drawable/anim_radar"
+        android:title="@string/discover" />
+
+    <item
+        android:id="@+id/chat_menu"
+        android:icon="@drawable/anim_chat"
+        android:title="@string/chat" />
+
+    <item
+        android:id="@+id/profile_menu"
+        android:icon="@drawable/anim_account"
+        android:title="@string/account" />
+
+</menu>
